@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class FirstPersonController : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float sprintSpeed = 10.0f; // Speed while sprinting
+    public float speed = 25.0f;
+    public float sprintSpeed = 50.0f; // Speed while sprinting
     public float jumpForce = 7.0f;
     public float mouseSensitivity = 100.0f; // Sensitivity of mouse movement
 
@@ -15,7 +15,7 @@ public class FirstPersonController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        cameraTransform = Camera.main.transform; // Assuming the main camera is the child camera for the player
+        cameraTransform = Camera.main.transform; // We'll use the main camera for the player
         Cursor.lockState = CursorLockMode.Locked; // Lock the cursor to the center of the screen
         Cursor.visible = false; // Hide the cursor
     }
