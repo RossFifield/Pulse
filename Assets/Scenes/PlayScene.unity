@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,9 +135,10 @@ GameObject:
   - component: {fileID: 88447387}
   - component: {fileID: 88447386}
   - component: {fileID: 88447385}
+  - component: {fileID: 88447388}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,7 +199,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a6c9f92d2bc4ee4fb3e6f8882d937d4, type: 2}
+  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -228,6 +229,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88447383}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &88447388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88447383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e47800e7f8414031845785071509f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  maxTime: 2
+  player: {fileID: 1678079604}
+  sonar: {fileID: 1285244905}
 --- !u!1 &457032748
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,9 +366,10 @@ GameObject:
   - component: {fileID: 521334315}
   - component: {fileID: 521334314}
   - component: {fileID: 521334313}
+  - component: {fileID: 521334317}
   m_Layer: 0
   m_Name: Wall (3)
-  m_TagString: Untagged
+  m_TagString: Danger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,7 +415,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a6c9f92d2bc4ee4fb3e6f8882d937d4, type: 2}
+  - {fileID: 2100000, guid: 246d8bc831c2b4eb4b6f90d93a048a52, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -438,6 +460,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &521334317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521334312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e47800e7f8414031845785071509f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  maxTime: 2
+  player: {fileID: 1678079604}
+  sonar: {fileID: 1285244905}
 --- !u!1 &542509261
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,9 +492,10 @@ GameObject:
   - component: {fileID: 542509264}
   - component: {fileID: 542509263}
   - component: {fileID: 542509262}
+  - component: {fileID: 542509266}
   m_Layer: 0
   m_Name: Wall (1)
-  m_TagString: Untagged
+  m_TagString: Danger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -498,7 +541,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a6c9f92d2bc4ee4fb3e6f8882d937d4, type: 2}
+  - {fileID: 2100000, guid: 246d8bc831c2b4eb4b6f90d93a048a52, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -543,6 +586,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &542509266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542509261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e47800e7f8414031845785071509f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  maxTime: 2
+  player: {fileID: 1678079604}
+  sonar: {fileID: 1285244905}
 --- !u!1 &655009128
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,9 +618,10 @@ GameObject:
   - component: {fileID: 655009132}
   - component: {fileID: 655009131}
   - component: {fileID: 655009130}
+  - component: {fileID: 655009133}
   m_Layer: 0
   m_Name: Ramp
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -619,7 +683,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a6c9f92d2bc4ee4fb3e6f8882d937d4, type: 2}
+  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -649,6 +713,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655009128}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &655009133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655009128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e47800e7f8414031845785071509f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  maxTime: 2
+  player: {fileID: 1678079604}
+  sonar: {fileID: 1285244905}
 --- !u!1 &663125887
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,9 +778,10 @@ GameObject:
   - component: {fileID: 715540275}
   - component: {fileID: 715540274}
   - component: {fileID: 715540273}
+  - component: {fileID: 715540276}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -757,7 +842,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a6c9f92d2bc4ee4fb3e6f8882d937d4, type: 2}
+  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -787,6 +872,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715540271}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &715540276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715540271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e47800e7f8414031845785071509f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  maxTime: 2
+  player: {fileID: 1678079604}
+  sonar: {fileID: 1285244905}
 --- !u!1 &810262775
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,9 +937,10 @@ GameObject:
   - component: {fileID: 1045407084}
   - component: {fileID: 1045407083}
   - component: {fileID: 1045407082}
+  - component: {fileID: 1045407085}
   m_Layer: 0
   m_Name: Ramp
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -896,7 +1002,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a6c9f92d2bc4ee4fb3e6f8882d937d4, type: 2}
+  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -926,6 +1032,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045407080}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1045407085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045407080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e47800e7f8414031845785071509f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  maxTime: 2
+  player: {fileID: 1678079604}
+  sonar: {fileID: 1285244905}
 --- !u!1 &1193314860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,6 +1266,7 @@ GameObject:
   - component: {fileID: 1285244904}
   - component: {fileID: 1285244903}
   - component: {fileID: 1285244902}
+  - component: {fileID: 1285244905}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1222,6 +1349,40 @@ Transform:
   - {fileID: 1193450562}
   m_Father: {fileID: 1678079604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1285244905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285244901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c725fe963b534280bc779c2e7f23fb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 6d12e7ab487bf49d18b89038af741a18, type: 3}
+  _materialArray:
+  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
+  - {fileID: 2100000, guid: 19c3283cad9fc43b98b2dc30a485ec67, type: 2}
+  - {fileID: 2100000, guid: f15e0eeb6da8a4432834bef00edb7498, type: 2}
+  - {fileID: 2100000, guid: 246d8bc831c2b4eb4b6f90d93a048a52, type: 2}
+  _mode: 1
+  _direction: {x: 0, y: 0, z: 1}
+  _origin: {x: 0, y: 0, z: 0}
+  _originArray:
+  - {x: 1, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  _baseColor: {r: 0, g: 0, b: 0, a: 0}
+  _waveColor: {r: 1, g: 0, b: 0.61723757, a: 0}
+  _waveAmplitude: 2
+  _waveExponent: 1.7
+  _waveInterval: 2
+  _waveSpeed: 5
+  _addColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1292731447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,9 +1428,10 @@ GameObject:
   - component: {fileID: 1365614252}
   - component: {fileID: 1365614251}
   - component: {fileID: 1365614250}
+  - component: {fileID: 1365614254}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1315,7 +1477,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a6c9f92d2bc4ee4fb3e6f8882d937d4, type: 2}
+  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1360,6 +1522,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 663125888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1365614254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365614249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e47800e7f8414031845785071509f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  maxTime: 2
+  player: {fileID: 1678079604}
+  sonar: {fileID: 1285244905}
 --- !u!1 &1492490428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,9 +1554,10 @@ GameObject:
   - component: {fileID: 1492490432}
   - component: {fileID: 1492490431}
   - component: {fileID: 1492490430}
+  - component: {fileID: 1492490433}
   m_Layer: 0
   m_Name: Ramp
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1436,7 +1619,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a6c9f92d2bc4ee4fb3e6f8882d937d4, type: 2}
+  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1466,6 +1649,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492490428}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1492490433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492490428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e47800e7f8414031845785071509f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  maxTime: 2
+  player: {fileID: 1678079604}
+  sonar: {fileID: 1285244905}
 --- !u!1 &1526678257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,9 +1775,10 @@ GameObject:
   - component: {fileID: 1663382081}
   - component: {fileID: 1663382080}
   - component: {fileID: 1663382079}
+  - component: {fileID: 1663382083}
   m_Layer: 0
   m_Name: Ramp
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1621,7 +1825,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a6c9f92d2bc4ee4fb3e6f8882d937d4, type: 2}
+  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1666,6 +1870,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 663125888}
   m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
+--- !u!114 &1663382083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663382078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e47800e7f8414031845785071509f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  maxTime: 2
+  player: {fileID: 1678079604}
+  sonar: {fileID: 1285244905}
 --- !u!1 &1678079598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,9 +2056,10 @@ GameObject:
   - component: {fileID: 1680678920}
   - component: {fileID: 1680678919}
   - component: {fileID: 1680678918}
+  - component: {fileID: 1680678921}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1895,7 +2120,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a6c9f92d2bc4ee4fb3e6f8882d937d4, type: 2}
+  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1925,6 +2150,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680678916}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1680678921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680678916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e47800e7f8414031845785071509f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  maxTime: 2
+  player: {fileID: 1678079604}
+  sonar: {fileID: 1285244905}
 --- !u!1 &1716904738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,6 +2182,7 @@ GameObject:
   - component: {fileID: 1716904741}
   - component: {fileID: 1716904740}
   - component: {fileID: 1716904739}
+  - component: {fileID: 1716904743}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Ground
@@ -1985,7 +2231,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 143ed2a97bf2e1649abc427dab3f4692, type: 2}
+  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2030,6 +2276,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1716904743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716904738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e47800e7f8414031845785071509f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  maxTime: 2
+  player: {fileID: 1678079604}
+  sonar: {fileID: 1285244905}
 --- !u!1 &1740445695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2324,9 +2590,10 @@ GameObject:
   - component: {fileID: 1788016997}
   - component: {fileID: 1788016996}
   - component: {fileID: 1788016995}
+  - component: {fileID: 1788016999}
   m_Layer: 0
   m_Name: Wall (2)
-  m_TagString: Untagged
+  m_TagString: Danger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2372,7 +2639,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a6c9f92d2bc4ee4fb3e6f8882d937d4, type: 2}
+  - {fileID: 2100000, guid: 246d8bc831c2b4eb4b6f90d93a048a52, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2417,6 +2684,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1788016999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788016994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e47800e7f8414031845785071509f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  maxTime: 2
+  player: {fileID: 1678079604}
+  sonar: {fileID: 1285244905}
 --- !u!1 &1888946517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,9 +2716,10 @@ GameObject:
   - component: {fileID: 1888946520}
   - component: {fileID: 1888946519}
   - component: {fileID: 1888946518}
+  - component: {fileID: 1888946522}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Danger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2477,7 +2765,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a6c9f92d2bc4ee4fb3e6f8882d937d4, type: 2}
+  - {fileID: 2100000, guid: 246d8bc831c2b4eb4b6f90d93a048a52, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2522,6 +2810,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1888946522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888946517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e47800e7f8414031845785071509f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  maxTime: 2
+  player: {fileID: 1678079604}
+  sonar: {fileID: 1285244905}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
