@@ -8,6 +8,7 @@ TagManager:
   - Danger
   - FOOD
   - Tool
+  - Environment
   layers:
   - Default
   - TransparentFX

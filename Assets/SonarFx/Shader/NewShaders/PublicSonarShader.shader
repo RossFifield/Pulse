@@ -130,9 +130,9 @@ Shader "PublicSonarShader"
                     OUT.Emission += _SonarWaveColor * w + _SonarAddColor;
                     OUT.Albedo = _SonarBaseColor;
 
-                    if (OUT.Emission.x != _SonarBaseColor.x &&
-                        OUT.Emission.y != _SonarBaseColor.y &&
-                        OUT.Emission.z != _SonarBaseColor.z)
+                    if (OUT.Emission.x > 0 ||
+                        OUT.Emission.y > 0 ||
+                        OUT.Emission.z > 0)
                     {
                         OUT.Alpha = 0.7;
                     }
