@@ -98,44 +98,50 @@ Shader "PublicSonarShader"
 #else
 
             for (int i = 0; i < _SonarArraySize; i++){
+                
+                if(_SonarWaveVectorArray[i].w == 1) {
 
-                float dist = length(IN.worldPos - _SonarWaveVectorArray[i].xyz);
 
-                float w = dist;
+                    float dist = length(IN.worldPos - _SonarWaveVectorArray[i].xyz);
 
-                // Moving wave.
-                w -= _Time.y * _SonarWaveParams.w;
+                    float w = dist;
 
-                // Get modulo (w % params.z / params.z)
-                w /= _SonarWaveParams.z;
-                w = w - floor(w);
+                    // Moving wave.
+                    w -= _Time.y * _SonarWaveParams.w;
 
-                // Make the gradient steeper.
-                float p = _SonarWaveParams.y;
-                w = (pow(w, p) + pow(1 - w, p * 4)) * 0.5;
+                    // Get modulo (w % params.z / params.z)
+                    w /= _SonarWaveParams.z;
+                    w = w - floor(w);
 
-                // Amplify.
-                w *= _SonarWaveParams.x;
+                    // Make the gradient steeper.
+                    float p = _SonarWaveParams.y;
+                    w = (pow(w, p) + pow(1 - w, p * 4)) * 0.5;
 
-                if (dist > 12){
+                    // Amplify.
+                    w *= _SonarWaveParams.x;
+
+                    if (dist > 12){
                     
-                    w=0;
+                        w=0;
 
-                }
+                    }
 
-                // Apply to the surface.
-                OUT.Emission += _SonarWaveColor * w + _SonarAddColor;
-                OUT.Albedo = _SonarBaseColor;
+                    // Apply to the surface.
+                    OUT.Emission += _SonarWaveColor * w + _SonarAddColor;
+                    OUT.Albedo = _SonarBaseColor;
 
-                if (OUT.Emission.x != _SonarBaseColor.x &&
-                    OUT.Emission.y != _SonarBaseColor.y &&
-                    OUT.Emission.z != _SonarBaseColor.z)
-                {
-                    OUT.Alpha = 0.7;
-                }
+                    if (OUT.Emission.x != _SonarBaseColor.x &&
+                        OUT.Emission.y != _SonarBaseColor.y &&
+                        OUT.Emission.z != _SonarBaseColor.z)
+                    {
+                        OUT.Alpha = 0.7;
+                    }
 
-                else{
-                    OUT.Alpha = 1;
+                    else{
+                        OUT.Alpha = 1;
+                    }
+                
+
                 }
                 
 
@@ -163,6 +169,11 @@ Shader "PublicSonarShader"
 
                 }*/
                 
+            }
+
+            OUT.Albedo = _SonarBaseColor;
+            if(OUT.Alpha == 0){
+                OUT.Alpha = 1;
             }
             
 #endif

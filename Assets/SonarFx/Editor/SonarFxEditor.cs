@@ -73,7 +73,9 @@ public class SonarFxEditor : Editor
         if (propMode.hasMultipleDifferentValues ||
             propMode.enumValueIndex == (int)SonarFx.SonarMode.Spherical)
             EditorGUILayout.PropertyField(propOrigin);
-            EditorGUILayout.PropertyField(propOriginArray);
+
+        EditorGUILayout.PropertyField(propOriginArray);
+            
 
         EditorGUI.indentLevel--;
 

@@ -110,12 +110,15 @@ public class SonarFx : MonoBehaviour
     }
 
     // Return how many active wave origins there are in the scene
-    int GetOriginArraySize()
+    public int GetOriginArraySize()
     {
         int originCount = 0;
-        for (int i = 0; i < _originArray.Length && _originArray[i] != Vector4.zero; i++)
+        for (int i = 0; i < _originArray.Length; i++)
         {
-            originCount++;
+            if(_originArray[i].w != 0)
+            {
+                originCount++;
+            }
         }
 
         return originCount;
