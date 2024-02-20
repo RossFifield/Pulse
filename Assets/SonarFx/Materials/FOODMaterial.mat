@@ -83,7 +83,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SonarAddColor: {r: 0, g: 0, b: 0, a: 1}
     - _SonarBaseColor: {r: 0, g: 0, b: 0, a: 0}
-    - _SonarWaveColor: {r: 0, g: 1, b: 0.07058835, a: 0}
+    - _SonarWaveColor: {r: 0, g: 1, b: 0.07058835, a: 1}
     - _SonarWaveParams: {r: 2, g: 1.7, b: 2, a: 5}
     - _SonarWaveVector: {r: 0, g: 0, b: 1, a: 0}
   m_BuildTextureStacks: []

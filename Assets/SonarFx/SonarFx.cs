@@ -51,7 +51,7 @@ public class SonarFx : MonoBehaviour
     public Vector4[] originArray { get { return _originArray; } set { _originArray = value; } }
 
     // Base color (albedo)
-    [SerializeField] Color _baseColor = new Color(0.2f, 0.2f, 0.2f, 0);
+    [SerializeField] Color _baseColor = new Color(0f, 0f, 0f, 1);
     public Color baseColor { get { return _baseColor; } set { _baseColor = value; } }
 
     // Wave color

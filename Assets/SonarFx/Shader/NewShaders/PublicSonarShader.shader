@@ -24,8 +24,8 @@ Shader "PublicSonarShader"
 {
     Properties
     {
-        _SonarBaseColor  ("Base Color",  Color)  = (0.1, 0.1, 0.1, 0)
-        _SonarWaveColor  ("Wave Color",  Color)  = (1.0, 0.1, 0.1, 0)
+        _SonarBaseColor  ("Base Color",  Color)  = (0.1, 0.1, 0.1, 1)
+        _SonarWaveColor  ("Wave Color",  Color)  = (1.0, 0.1, 0.1, 1)
         _SonarWaveParams ("Wave Params", Vector) = (1, 20, 20, 10)
         _SonarWaveVector ("Wave Vector", Vector) = (0, 0, 1, 0)
         _SonarAddColor   ("Add Color",   Color)  = (0, 0, 0, 0)
@@ -34,11 +34,17 @@ Shader "PublicSonarShader"
     }
     SubShader
     {
-        Tags { "RenderType" = "Opaque" }
+        //Tags { "RenderType" = "Opaque" }
+
+        Tags{ "RenderType"="Transparent" "Queue"="Transparent"}
+
+        Blend SrcAlpha OneMinusSrcAlpha
+
+        ZWrite Off
 
         CGPROGRAM
 
-        #pragma surface surf Lambert
+        #pragma surface surf Lambert alpha:fade
         #pragma multi_compile SONAR_DIRECTIONAL SONAR_SPHERICAL
 
         struct Input
@@ -46,6 +52,8 @@ Shader "PublicSonarShader"
             float3 worldPos;
         };
 
+
+        // Global Variables (Non-Individual)
         float3 _SonarBaseColor;
         float3 _SonarWaveColor;
         float4 _SonarWaveParams; // Amp, Exp, Interval, Speed
@@ -59,8 +67,10 @@ Shader "PublicSonarShader"
         float3 _SonarHighlightColor;
         int _Tagged;
         float maxHighlightTime;
-        
+        ////
 
+
+        // Surface function (Individual)
         void surf(Input IN, inout SurfaceOutput OUT)
         {
 
@@ -116,6 +126,18 @@ Shader "PublicSonarShader"
                 // Apply to the surface.
                 OUT.Emission += _SonarWaveColor * w + _SonarAddColor;
                 OUT.Albedo = _SonarBaseColor;
+
+                if (OUT.Emission.x != _SonarBaseColor.x &&
+                    OUT.Emission.y != _SonarBaseColor.y &&
+                    OUT.Emission.z != _SonarBaseColor.z)
+                {
+                    OUT.Alpha = 0.7;
+                }
+
+                else{
+                    OUT.Alpha = 1;
+                }
+                
 
                 // Make WaveColor the Albedo (base color) after it's been highlighted
                 /*

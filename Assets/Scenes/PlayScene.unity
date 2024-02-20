@@ -199,7 +199,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
+  - {fileID: 2100000, guid: 19c3283cad9fc43b98b2dc30a485ec67, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -242,10 +242,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
-  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
-  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
-  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
-  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 1}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 1}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 1}
   maxTime: 2
   player: {fileID: 1678079604}
   sonar: {fileID: 1285244905}
@@ -473,10 +473,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
-  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
-  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
-  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
-  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 1}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 1}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 1}
   maxTime: 2
   player: {fileID: 1678079604}
   sonar: {fileID: 1285244905}
@@ -599,10 +599,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
-  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
-  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
-  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
-  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 1}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 1}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 1}
   maxTime: 2
   player: {fileID: 1678079604}
   sonar: {fileID: 1285244905}
@@ -683,7 +683,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
+  - {fileID: 2100000, guid: 19c3283cad9fc43b98b2dc30a485ec67, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -726,10 +726,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
-  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
-  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
-  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
-  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 1}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 1}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 1}
   maxTime: 2
   player: {fileID: 1678079604}
   sonar: {fileID: 1285244905}
@@ -842,7 +842,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
+  - {fileID: 2100000, guid: 19c3283cad9fc43b98b2dc30a485ec67, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -885,10 +885,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
-  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
-  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
-  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
-  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 1}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 1}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 1}
   maxTime: 2
   player: {fileID: 1678079604}
   sonar: {fileID: 1285244905}
@@ -917,7 +917,7 @@ Transform:
   m_GameObject: {fileID: 810262775}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: -20.62, y: 10.201144, z: 0.86}
+  m_LocalPosition: {x: -20.6, y: 10.201144, z: 7.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1002,7 +1002,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
+  - {fileID: 2100000, guid: 19c3283cad9fc43b98b2dc30a485ec67, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1045,10 +1045,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
-  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
-  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
-  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
-  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 1}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 1}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 1}
   maxTime: 2
   player: {fileID: 1678079604}
   sonar: {fileID: 1285244905}
@@ -1477,7 +1477,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
+  - {fileID: 2100000, guid: 19c3283cad9fc43b98b2dc30a485ec67, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1535,10 +1535,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
-  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
-  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
-  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
-  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 1}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 1}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 1}
   maxTime: 2
   player: {fileID: 1678079604}
   sonar: {fileID: 1285244905}
@@ -1619,7 +1619,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
+  - {fileID: 2100000, guid: 19c3283cad9fc43b98b2dc30a485ec67, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1662,10 +1662,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
-  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
-  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
-  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
-  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 1}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 1}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 1}
   maxTime: 2
   player: {fileID: 1678079604}
   sonar: {fileID: 1285244905}
@@ -1825,7 +1825,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
+  - {fileID: 2100000, guid: 19c3283cad9fc43b98b2dc30a485ec67, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1883,10 +1883,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
-  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
-  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
-  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
-  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 1}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 1}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 1}
   maxTime: 2
   player: {fileID: 1678079604}
   sonar: {fileID: 1285244905}
@@ -2120,7 +2120,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b185a904473df44d2a0c7c15bf2dfccd, type: 2}
+  - {fileID: 2100000, guid: 19c3283cad9fc43b98b2dc30a485ec67, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2163,10 +2163,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
-  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
-  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
-  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
-  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 1}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 1}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 1}
   maxTime: 2
   player: {fileID: 1678079604}
   sonar: {fileID: 1285244905}
@@ -2269,8 +2269,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716904738}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: -0}
   m_LocalScale: {x: 50, y: 1, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2289,10 +2289,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
-  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
-  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
-  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
-  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 1}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 1}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 1}
   maxTime: 2
   player: {fileID: 1678079604}
   sonar: {fileID: 1285244905}
@@ -2697,10 +2697,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
-  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
-  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
-  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
-  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 1}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 1}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 1}
   maxTime: 2
   player: {fileID: 1678079604}
   sonar: {fileID: 1285244905}
@@ -2823,10 +2823,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: a2ababc830c4a4222a9738d24047828c, type: 3}
-  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 0}
-  _dangerColor: {r: 1, g: 0, b: 0, a: 0}
-  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 0}
-  _environmentColor: {r: 1, g: 1, b: 1, a: 0}
+  _foodColor: {r: 0, g: 1, b: 0.14507627, a: 1}
+  _dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  _toolColor: {r: 1, g: 0.9613125, b: 0.051886797, a: 1}
+  _environmentColor: {r: 1, g: 1, b: 1, a: 1}
   maxTime: 2
   player: {fileID: 1678079604}
   sonar: {fileID: 1285244905}
@@ -2836,7 +2836,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1526678259}
   - {fileID: 1193314863}
-  - {fileID: 1716904742}
   - {fileID: 1678079604}
   - {fileID: 1888946521}
   - {fileID: 1788016998}
@@ -2845,4 +2844,5 @@ SceneRoots:
   - {fileID: 663125888}
   - {fileID: 1292731448}
   - {fileID: 1244395715}
+  - {fileID: 1716904742}
   - {fileID: 810262776}
