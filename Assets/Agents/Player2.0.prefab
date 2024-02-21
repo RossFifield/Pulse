@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2976536954491750569}
   - component: {fileID: 2320763295010342886}
   - component: {fileID: 6993565565123143387}
+  - component: {fileID: 4971993504757151343}
   m_Layer: 0
   m_Name: Player2.0
   m_TagString: Player
@@ -121,13 +122,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2059869410019041646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef6811f3e3d95f34fa836e839640ac3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 70195b905a1ebb940958f367e4ba1df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
-  sprintSpeed: 50
-  jumpForce: 7
-  mouseSensitivity: 500
+  movementSpeed: 5
+  mouseSensitivity: 2
+  strafeSpeedMultiplier: 1.5
 --- !u!114 &2320763295010342886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +168,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!143 &4971993504757151343
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059869410019041646}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2448156743538270336
 GameObject:
   m_ObjectHideFlags: 0
