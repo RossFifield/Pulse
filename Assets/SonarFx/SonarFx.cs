@@ -153,26 +153,28 @@ public class SonarFx : MonoBehaviour
             }
 
         }
-        //Shader.SetGlobalColor(baseColorID, _baseColor);
-
-
-        //Shader.SetGlobalColor(waveColorID, _waveColor);
-        //Shader.SetGlobalColor(addColorID, _addColor);
-
-        //var param = new Vector4(_waveAmplitude, _waveExponent, _waveInterval, _waveSpeed);
-        //Shader.SetGlobalVector(waveParamsID, param);
-
-        //if (_mode == SonarMode.Directional)
-        //{
-        //    Shader.DisableKeyword("SONAR_SPHERICAL");
-        //    Shader.SetGlobalVector(waveVectorID, _direction.normalized);
-        //}
-        //else
-        //{
-        //    Shader.EnableKeyword("SONAR_SPHERICAL");
-        //    Shader.SetGlobalVector(waveVectorID, _origin);
-        //    Shader.SetGlobalVectorArray(waveArrayVectorID, _originArray);
-        //    Shader.SetGlobalInt(waveArraySizeID, GetOriginArraySize());
-        //}
     }
+
+    //Old code for Update()
+    //Shader.SetGlobalColor(baseColorID, _baseColor);
+
+
+    //Shader.SetGlobalColor(waveColorID, _waveColor);
+    //Shader.SetGlobalColor(addColorID, _addColor);
+
+    //var param = new Vector4(_waveAmplitude, _waveExponent, _waveInterval, _waveSpeed);
+    //Shader.SetGlobalVector(waveParamsID, param);
+
+    //if (_mode == SonarMode.Directional)
+    //{
+    //    Shader.DisableKeyword("SONAR_SPHERICAL");
+    //    Shader.SetGlobalVector(waveVectorID, _direction.normalized);
+    //}
+    //else
+    //{
+    //    Shader.EnableKeyword("SONAR_SPHERICAL");
+    //    Shader.SetGlobalVector(waveVectorID, _origin);
+    //    Shader.SetGlobalVectorArray(waveArrayVectorID, _originArray);
+    //    Shader.SetGlobalInt(waveArraySizeID, GetOriginArraySize());
+    //}
 }
