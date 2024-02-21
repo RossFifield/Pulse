@@ -39,6 +39,13 @@ public class Startup : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
     }
 
+    void Update()
+    {
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+    }
 
     void Init() //sets up the game and runs the menu
     {
