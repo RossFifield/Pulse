@@ -33,8 +33,12 @@ public class EchoManager : MonoBehaviour
     bool _sonarOn = false;
     public bool sonarOn { get { return _sonarOn; } set { _sonarOn = value; } }
 
+    bool _FOODFound = false;
+
     float currentTime = 0;
+    //float currentFOODTime = 0;
     [SerializeField] float maxTime = 4;
+    //[SerializeField] float maxFOODTime = 10;
 
     // Past Sonar Counter
     public int pastSonarCounter;
@@ -64,6 +68,11 @@ public class EchoManager : MonoBehaviour
     [SerializeField] Color[] enviroMaterialColors;
 
 
+    // Sonar Radius
+    [SerializeField] int localRadius;
+    int rangedRadius;
+    bool ranged = true;
+
     private void Awake()
     {
 
@@ -84,7 +93,7 @@ public class EchoManager : MonoBehaviour
         dangerMaterialColors = new Color[danger.Length];
         enviroMaterialColors = new Color[environment.Length];
 
-        
+        rangedRadius = localRadius*2 / 3;
     }
 
     // Start is called before the first frame update
@@ -102,6 +111,8 @@ public class EchoManager : MonoBehaviour
                 player.position.x, player.position.y, player.position.z, 1);
 
             pastSonarCounter += 1;
+
+            ranged = false;
 
             Echo();
         }
@@ -133,11 +144,11 @@ public class EchoManager : MonoBehaviour
                         ("_SonarWaveColor", toolMaterialColors[i] * (currentTime / maxTime));
             }
 
-            for (int i = 0; i < FOOD.Length; i++)
-            {
-                FOOD[i].GetComponent<Renderer>().material.SetColor
-                        ("_SonarWaveColor", FOODMaterialColors[i] * (currentTime / maxTime));
-            }
+            //for (int i = 0; i < FOOD.Length; i++)
+            //{
+            //    FOOD[i].GetComponent<Renderer>().material.SetColor
+            //            ("_SonarWaveColor", FOODMaterialColors[i] * (currentTime / maxTime));
+            //}
 
             for (int i = 0; i < danger.Length; i++)
             {
@@ -168,7 +179,7 @@ public class EchoManager : MonoBehaviour
 
                         if (i == 0)
                         {
-                            appending = true;
+                            appending = true; // New sonar was created. Append it to the array
                         }
                     }
 
@@ -240,6 +251,22 @@ public class EchoManager : MonoBehaviour
 
     public void Echo()
     {
+        int thisRadius;
+
+        if (ranged)
+        {
+            thisRadius = rangedRadius;
+
+            Debug.Log("Ranged: " + rangedRadius);
+        }
+
+        else
+        {
+            thisRadius = localRadius;
+            ranged = true;
+
+            Debug.Log("Local: " + localRadius) ;
+        }
 
         if (FOOD.Length > 0)
         {
@@ -252,6 +279,9 @@ public class EchoManager : MonoBehaviour
 
                 FOOD[i].GetComponent<Renderer>().material.SetInt
                                 ("_SonarArraySize", sonar.GetOriginArraySize());
+
+                FOOD[i].GetComponent<Renderer>().material.SetInt
+                                ("_Radius", thisRadius);
 
                 FOODMaterialColors[i] = FOOD[i].GetComponent<Renderer>().material.
                     GetColor("_SonarWaveColor");
@@ -273,6 +303,9 @@ public class EchoManager : MonoBehaviour
                 tools[i].GetComponent<Renderer>().material.SetInt
                                 ("_SonarArraySize", sonar.GetOriginArraySize());
 
+                tools[i].GetComponent<Renderer>().material.SetInt
+                                ("_Radius", thisRadius);
+
                 toolMaterialColors[i] = tools[i].GetComponent<Renderer>().material.
                     GetColor("_SonarWaveColor");
             }
@@ -290,6 +323,9 @@ public class EchoManager : MonoBehaviour
 
                 danger[i].GetComponent<Renderer>().material.SetInt
                                 ("_SonarArraySize", sonar.GetOriginArraySize());
+
+                danger[i].GetComponent<Renderer>().material.SetInt
+                                ("_Radius", thisRadius);
 
                 dangerMaterialColors[i] = danger[i].GetComponent<Renderer>().material.
                     GetColor("_SonarWaveColor");
@@ -309,12 +345,15 @@ public class EchoManager : MonoBehaviour
                 environment[i].GetComponent<Renderer>().material.SetInt
                     ("_SonarArraySize", sonar.GetOriginArraySize());
 
+                environment[i].GetComponent<Renderer>().material.SetInt
+                                ("_Radius", thisRadius);
+
                 enviroMaterialColors[i] = environment[i].GetComponent<Renderer>().material.
                     GetColor("_SonarWaveColor");
             }
         }
 
-        Debug.Log("Echo Origin Array Size: " + sonar.GetOriginArraySize());
+        //Debug.Log("Echo Origin Array Size: " + sonar.GetOriginArraySize());
 
         _sonarOn = true;
         currentTime = maxTime;

@@ -67,6 +67,8 @@ Shader "PublicSonarShader"
         float3 _SonarHighlightColor;
         int _Tagged;
         float maxHighlightTime;
+
+        int _Radius;
         ////
 
 
@@ -120,9 +122,9 @@ Shader "PublicSonarShader"
                     // Amplify.
                     w *= _SonarWaveParams.x;
 
-                    if (dist > 12){
+                    if (dist > _Radius){
                     
-                        w=0;
+                        w = 0;
 
                     }
 
