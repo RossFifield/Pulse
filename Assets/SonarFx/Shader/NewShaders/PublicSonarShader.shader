@@ -99,7 +99,7 @@ Shader "PublicSonarShader"
 
 #else
 
-            for (int i = 0; i < _SonarArraySize; i++){
+            for (int i = 0; i < _SonarArraySize + 1; i++){
                 
                 if(_SonarWaveVectorArray[i].w == 1) {
 

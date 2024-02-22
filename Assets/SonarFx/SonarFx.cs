@@ -101,7 +101,7 @@ public class SonarFx : MonoBehaviour
     void OnEnable()
     {
         //GetComponent<Camera>().SetReplacementShader(shader, null);
-        Update();
+        //Update();
     }
 
     void OnDisable()

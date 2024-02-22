@@ -73,6 +73,9 @@ public class EchoManager : MonoBehaviour
     int rangedRadius;
     bool ranged = true;
 
+    //Debug
+    //[SerializeField] int originArraySize;
+
     private void Awake()
     {
 
@@ -132,6 +135,8 @@ public class EchoManager : MonoBehaviour
                 Echo();
             }
         }
+
+        //originArraySize = sonar.GetOriginArraySize();
     }
 
     private void FixedUpdate()
@@ -257,7 +262,7 @@ public class EchoManager : MonoBehaviour
         {
             thisRadius = rangedRadius;
 
-            Debug.Log("Ranged: " + rangedRadius);
+            //Debug.Log("Ranged: " + rangedRadius);
         }
 
         else
@@ -265,7 +270,7 @@ public class EchoManager : MonoBehaviour
             thisRadius = localRadius;
             ranged = true;
 
-            Debug.Log("Local: " + localRadius) ;
+            //Debug.Log("Local: " + localRadius) ;
         }
 
         if (FOOD.Length > 0)
@@ -354,6 +359,7 @@ public class EchoManager : MonoBehaviour
         }
 
         //Debug.Log("Echo Origin Array Size: " + sonar.GetOriginArraySize());
+        Debug.Log("Past Echoes: " + pastSonarCounter);
 
         _sonarOn = true;
         currentTime = maxTime;
